@@ -4,7 +4,7 @@ d1 = Distance(230, "cm")
 d2 = Distance(3.3, "m")
 d3 = Distance(1.1, "km")
 
-print("Инициализация:")
+print("пример:")
 print(d1)
 print(d2)
 print(d3)

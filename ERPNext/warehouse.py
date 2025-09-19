@@ -1,16 +1,5 @@
 import frappe
 
-doc = frappe.get_doc({
-    "doctype": "Stock Entry",
-    "stock_entry_type": "Material Receipt",
-    "items": [
-        {
-            "item_code": "TEST-ITEM",
-            "qty": 10,
-            "uom": "Nos",
-            "t_warehouse": "Main Warehouse - ERP"
-        }
-    ]
-})
-doc.insert()
-doc.submit()
+items = frappe.get_all("Item", fields=["name", "item_name", "stock_uom"])
+for i in items:
+    print(i)
